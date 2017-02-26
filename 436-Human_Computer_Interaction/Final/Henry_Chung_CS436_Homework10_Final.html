@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sliders</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<style>
+body {
+  background-image: url('see.jpg');
+}
+.S {
+  background: #0F8;
+}
+.login {
+  background: #7FFF00;
+}
+.logout {
+  background: #FF4500;
+}
+.page_read {
+  background: #FFC0C3;
+}
+.file_download {
+  background: #FFA500;
+}
+.A {
+  background: #F8F8FF;
+}
+.B {
+  background: #000000;
+}
+.C {
+  background: #D2691E;
+}
+</style>
+</head>
+<body>
+<br>
+<div class="container-fluid C">
+  <div class="container-fluid A">
+    <label class="S">User Search (Computer Science)</label>
+    <br>
+    <label class="S" id="popoverData" data-content="1" rel="popover" data-placement="bottom" data-original-title="Use Cases" data-trigger="hover">Date: <input type="text" id="datepicker"></label>
+    <p>
+      <label for="date" class="S" id="popoverData1" data-content="1" rel="popover" data-placement="bottom" data-original-title="Use Cases" data-trigger="hover">Date:</label>
+      <input type="text" id="date" readonly style="border:0; color:#f6931f; font-weight:bold;">
+    </p>
+    <div id="slider-one"></div>
+    <br>
+    <p>
+      <label for="user" class="S" id="popoverData2" data-content="2" rel="popover" data-placement="bottom" data-original-title="Use Cases" data-trigger="hover">User:</label>
+      <input type="text" id="user" readonly style="border:0; color:#f6931f; font-weight:bold;">
+    </p>
+    <div id="slider-two"></div>
+    <br>
+    <div class="container-fluid S">
+      <div class="row" id="popoverData3" data-content="3" rel="popover" data-placement="bottom" data-original-title="Use Cases" data-trigger="hover"><p>Event Type</p></div>
+        <div class="row button-group filters-button-group">
+          <div id="filters" class="button-group">
+            <button class="col-md-4 button is-checked" id="popoverData4" data-content="3" rel="popover" data-placement="bottom" data-original-title="Use Cases" data-trigger="hover" data-filter="*">show all</button>
+            <button class="col-md-2 button login" id="popoverData5" data-content="3" rel="popover" data-placement="bottom" data-original-title="Use Cases" data-trigger="hover" data-filter=".login">Login</button>
+            <button class="col-md-2 button file_download" id="popoverData6" data-content="3" rel="popover" data-placement="bottom" data-original-title="Use Cases" data-trigger="hover" data-filter=".file_download">File Download</button>
+            <button class="col-md-2 button page_read" id="popoverData7" data-content="3" rel="popover" data-placement="bottom" data-original-title="Use Cases" data-trigger="hover" data-filter=".page_read">Page Read</button>
+            <button class="col-md-2 logout button" id="popoverData8" data-content="3" rel="popover" data-placement="bottom" data-original-title="Use Cases" data-trigger="hover" data-filter=".logout">Logout</button>
+            <br><br>
+            <button class="col-md-2 button" id="popoverData9" data-content="5" rel="popover" data-placement="bottom" data-original-title="Use Cases" data-trigger="hover" data-sort-by="name" data-order="dsc">sort</button>
+            <button class="col-md-2 button logins" id="popoverData10" data-content="4" rel="popover" data-placement="bottom" data-original-title="Use Cases" data-trigger="hover"></button>
+            <button class="col-md-2 button files" id="popoverData11" data-content="4" rel="popover" data-placement="bottom" data-original-title="Use Cases" data-trigger="hover">Download:</button>
+            <button class="col-md-2 button pages" id="popoverData12" data-content="4" rel="popover" data-placement="bottom" data-original-title="Use Cases" data-trigger="hover">Page Read:</button>
+            <button class="col-md-2 button logouts" id="popoverData13" data-content="4" rel="popover" data-placement="bottom" data-original-title="Use Cases" data-trigger="hover">Logout:</button>
+            <button class="col-md-2 button" id="Noo">Reasoning</button>
+
+          </div>
+        </div>
+    </div>
+  </div>
+  <br>
+  <div class="container-fluid B">
+    <div id="list" class="row lead">
+      <div class="me filterdata"> </div>
+    </div>
+  </div>
+</div>
+</body>
+
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>
+  <script>
+  $(document).ready(function() {
+    $('#Noo').click(function(){
+      $(location).attr('href', 'Henry_Chung_CS436_Final_reasonpage.html')
+    });
+    $('#popoverData').popover();
+    $('#popoverData1').popover();
+    $('#popoverData2').popover();
+    $('#popoverData3').popover();
+    $('#popoverData4').popover();
+    $('#popoverData5').popover();
+    $('#popoverData6').popover();
+    $('#popoverData7').popover();
+    $('#popoverData8').popover();
+    $('#popoverData9').popover();
+    $('#popoverData10').popover();
+    $('#popoverData11').popover();
+    $('#popoverData12').popover();
+    $('#popoverData13').popover();
+    $('#popoverOption').popover({ trigger: "hover" });
+    var url = "https://dl.dropboxusercontent.com/u/24668172/data-short-600.json";
+      $.getJSON(url)
+        .done(function(Data) {
+          for (i = 0; i < Data.length; i++) {
+            $( ".me" ).append( "<div class='col-md-12 item " + Data[i][0] + " " + Data[i][1] + " " + Data[i][2] + " '> <div class='col-md-4'>" + Data[i][0] + "</div> <div class='col-md-4 name'>" + Data[i][1] + "</div><div class='col-md-4'>" + Data[i][2] + "</div>" + "</div>" );
+          }
+            var $grid = $('.filterdata').isotope({
+              itemSelector: '.item',
+              layoutMode: 'fitRows',
+              getSortData: {
+                name: '.name' 
+              }				  
+            });		
+            $('#filters').on( 'click', 'button', function() {
+              var filterValue = $( this ).attr('data-filter');
+              $grid.isotope({ filter: filterValue });
+            });
+            $( "#datepicker" ).datepicker({
+              dateFormat: "yy-mm-dd",
+              showOn: "button",
+              buttonImage: "cal.png",
+              buttonImageOnly: true,
+              buttonText: "Select date"
+            });
+            $( "#datepicker" ).change(function(){
+              $grid.isotope({ filter: "." + $(this).val() });
+              });
+            var Dates = ["*"];
+            var dates = ["All"];
+
+
+            for (g = 0; g < Data.length; g++) {
+              var d = 0;
+              for (h = 0; h < dates.length; h++) {
+                if (dates[h] == Data[g][1]){
+                  d = 1;
+                }
+                if ((h + 1 == dates.length) && (d == 0)){
+                  dates.push(Data[g][1]);
+                }
+              }
+            }
+            for (i = 0; i < dates.length; i++) {
+              if (i > 0 ) {
+                Dates.push("." + dates[i]);
+              }
+            }
+            $( "#slider-one" ).slider({
+              value: 1,
+              min: 1,
+              max: dates.length,
+              slide: function( event, ui ) {
+                $( "#date" ).val( dates[ui.value - 1] );
+                filtervalue = Dates[ui.value - 1];
+                $grid.isotope({ filter: filtervalue });
+              }
+            });
+            $( "#date" ).val( $( "#slider-one" ).slider( "value" ) );
+            var User = ["*",];
+            var user = ["All"];
+
+            for (a = 0; a < Data.length; a++) {
+              var x = 0;
+              for (b = 0; b < user.length; b++) {
+                  if (user[b] == Data[a][0]){
+                    x = 1;
+                  }
+                  if ((b + 1 == user.length) && (x == 0)){
+                    user.push(Data[a][0]);
+                  }
+              }
+            }
+            for (c = 0; c < user.length; c++) {
+              if (c > 0 ) {
+                User.push("." + user[c]);
+              }
+            }
+            $( "#slider-two" ).slider({
+              value: 1,
+              min: 1,
+              max: user.length,
+              slide: function( event, ui ) {
+                $( "#user" ).val( user[ui.value - 1] );
+                filtervalues = User[ui.value - 1];
+                $grid.isotope({ filter: filtervalues });
+              }
+            });
+            $( "#user" ).val( $( "#slider-two" ).slider( "value" ) );
+
+            $('#popoverData9').on( 'click', function() {
+              var sortbyval = $( this ).attr('data-sort-by');
+              var order = "";
+              if ($(this).attr("data-order")==="asc") {
+                order = true;
+                $(this).attr("data-order", "");
+              }
+              else {
+                order = false;
+                $(this).attr("data-order", "asc");
+              }
+              $grid.isotope({ sortBy : sortbyval, sortAscending: order });
+            });
+            $('.logins').html( "Login: " + $('.login').length);
+            $('.files').html( "Download: " + $('.file_download').length);
+            $('.pages').html( "Reading: " + $('.page_read').length);
+            $('.logouts').html( "Logout: " + $('.logout').length);
+        });
+  });
+  </script>
+</html>

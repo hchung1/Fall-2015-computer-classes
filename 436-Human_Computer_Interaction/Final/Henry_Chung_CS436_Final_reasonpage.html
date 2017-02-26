@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
+<style>
+body {
+  background-image: url('see.jpg');
+}
+.C {
+  background: #ffffff;
+}
+</style>
+</head>
+<body>
+<br><br>
+<div class="container-fluid C">
+  <br>
+  <h>Course Planning Structure Reasoning</h>
+  <p>For the first use case, I placed two dates, one with a calendar and the other was with a slider depending on preference. The calendar is for specific date while the slider holds existing dates. The second use case, the user is placed in a slider making it simple and compressed as one looks through the filtered data. Less buttons since there was a possibility of too many users. For the third use case, for the event type, there were only four distinct types, so there were five buttons in the place of the slider and is color coded. The fourth use case displayed the amounts of total logins, downloads, reads, and logouts inside a white button. The fifth use case was to make a decending list for time. With a ascending list of about 600 as time passes, it is easier to switch the order rather than scroll all the way down.</p>
+  <br><br><br>
+  <button id="more">RETURN</button>
+</div>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('#more').click(function(){
+      $(location).attr('href', 'Henry_Chung_CS436_Homework10_Final.html')
+    });
+  });
+</script>
+</body>
+</html>
